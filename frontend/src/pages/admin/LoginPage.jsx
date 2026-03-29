@@ -1,5 +1,5 @@
 // src/pages/admin/LoginPage.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
@@ -9,6 +9,13 @@ export default function LoginPage() {
   const [form, setForm] = useState({ username: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  // Eski localStorage anahtarlarını temizle
+  useEffect(() => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('admin');
+  }, []);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
