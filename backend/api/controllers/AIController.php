@@ -61,7 +61,7 @@ class AIController {
             $db->execute("DELETE FROM translations WHERE language_code IN ($langList)");
         }
 
-        $stats = ['products' => 0, 'categories' => 0, 'settings' => 0];
+        $stats = ['products' => 0, 'categories' => 0, 'settings' => 0, 'allergens' => 0];
 
         foreach ($langs as $l) {
             $batch = []; // key: unique_id, value: text
@@ -77,8 +77,8 @@ class AIController {
                 }
             }
 
-            // 2. Products
-            $products = $db->fetchAll("SELECT id, name, description FROM products");
+            // 2. Products (Including serving_size)
+            $products = $db->fetchAll("SELECT id, name, description, serving_size FROM products");
             foreach ($products as $prod) {
                 if (!empty($prod['name']) && !$this->hasTranslation($prod['id'], 'product', 'name', $l['code'])) {
                     $batch["prod_{$prod['id']}_name"] = $prod['name'];
@@ -86,12 +86,24 @@ class AIController {
                 if (!empty($prod['description']) && !$this->hasTranslation($prod['id'], 'product', 'description', $l['code'])) {
                     $batch["prod_{$prod['id']}_desc"] = $prod['description'];
                 }
+                if (!empty($prod['serving_size']) && !$this->hasTranslation($prod['id'], 'product', 'serving_size', $l['code'])) {
+                    $batch["prod_{$prod['id']}_serving"] = $prod['serving_size'];
+                }
             }
 
-            // 3. Settings
-            $settings = $db->fetchAll("SELECT id, setting_key, setting_value FROM site_settings WHERE setting_key IN ('site_title', 'site_subtitle', 'site_description', 'address')");
+            // 3. Allergens
+            $allergens = $db->fetchAll("SELECT id, name FROM allergen_types");
+            foreach ($allergens as $all) {
+                if (!empty($all['name']) && !$this->hasTranslation($all['id'], 'allergen', 'name', $l['code'])) {
+                    $batch["all_{$all['id']}_name"] = $all['name'];
+                }
+            }
+
+            // 4. Settings
+            $transKeys = ['site_title', 'site_subtitle', 'site_description', 'address', 'copyright_text', 'review_text'];
+            $settings = $db->fetchAll("SELECT id, setting_key, setting_value FROM site_settings");
             foreach ($settings as $s) {
-                if (!empty($s['setting_value']) && !$this->hasTranslation($s['id'], 'setting', $s['setting_key'], $l['code'])) {
+                if (in_array($s['setting_key'], $transKeys) && !empty($s['setting_value']) && !$this->hasTranslation($s['id'], 'setting', $s['setting_key'], $l['code'])) {
                     $batch["set_{$s['id']}_{$s['setting_key']}"] = $s['setting_value'];
                 }
             }
@@ -103,19 +115,28 @@ class AIController {
                     $translatedBatch = $this->callGeminiBatch($chunk, $l['code']);
                     if ($translatedBatch) {
                         foreach ($translatedBatch as $key => $val) {
-                            if (strpos($key, 'cat_') === 0) {
-                                $parts = explode('_', $key);
-                                $field = $parts[2] === 'name' ? 'name' : 'description';
-                                $this->saveTranslation((int)$parts[1], 'category', $field, $l['code'], $val);
+                            $parts = explode('_', $key);
+                            if (count($parts) < 3) continue;
+                            
+                            $prefix = $parts[0];
+                            $entityId = (int)$parts[1];
+                            $fieldSuffix = implode('_', array_slice($parts, 2));
+
+                            if ($prefix === 'cat') {
+                                $field = ($fieldSuffix === 'desc') ? 'description' : 'name';
+                                $this->saveTranslation($entityId, 'category', $field, $l['code'], $val);
                                 $stats['categories']++;
-                            } elseif (strpos($key, 'prod_') === 0) {
-                                $parts = explode('_', $key);
-                                $field = $parts[2] === 'name' ? 'name' : 'description';
-                                $this->saveTranslation((int)$parts[1], 'product', $field, $l['code'], $val);
+                            } elseif ($prefix === 'prod') {
+                                $field = 'name';
+                                if ($fieldSuffix === 'desc') $field = 'description';
+                                if ($fieldSuffix === 'serving') $field = 'serving_size';
+                                $this->saveTranslation($entityId, 'product', $field, $l['code'], $val);
                                 $stats['products']++;
-                            } elseif (strpos($key, 'set_') === 0) {
-                                $parts = explode('_', $key);
-                                $this->saveTranslation((int)$parts[1], 'setting', $parts[2], $l['code'], $val);
+                            } elseif ($prefix === 'all') {
+                                $this->saveTranslation($entityId, 'allergen', 'name', $l['code'], $val);
+                                $stats['allergens']++;
+                            } elseif ($prefix === 'set') {
+                                $this->saveTranslation($entityId, 'setting', $fieldSuffix, $l['code'], $val);
                                 $stats['settings']++;
                             }
                         }

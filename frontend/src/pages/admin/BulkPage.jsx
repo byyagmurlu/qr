@@ -61,7 +61,8 @@ export default function BulkPage() {
     setLoading(true);
     try {
       const res = await api.post('v1/admin/ai/bulk-translate', { force: force ? 1 : 0 });
-      alert(`İşlem tamam! ${res.data.data.products} ürün, ${res.data.data.categories} kategori ve ${res.data.data.debug?.settings || 0} site ayarı çevirisi eklendi.`);
+      const { products, categories, allergens, settings } = res.data.data;
+      alert(`İşlem tamam! ${products || 0} ürün, ${categories || 0} kategori, ${allergens || 0} alerjen ve ${settings || 0} site ayarı çevirisi eklendi.`);
     } catch (err) {
       alert(err.response?.data?.error || 'Yapay zeka çevirisi sırasında bir hata oluştu. Lütfen API anahtarını kontrol edin.');
     } finally {
