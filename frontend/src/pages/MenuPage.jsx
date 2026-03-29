@@ -258,12 +258,14 @@ export default function MenuPage() {
         activeSlug={activeSlug}
         onCategoryClick={setActiveSlug}
         lang={lang}
+        isRefreshing={catsLoading}
       />
 
       {selectedProduct && (
         <ProductModal 
           product={selectedProduct} 
           lang={lang}
+          isRefreshing={prodsLoading}
           onClose={() => setSelectedProductId(null)} 
         />
       )}

@@ -66,7 +66,15 @@ class AIController {
         foreach ($langs as $l) {
             $batch = []; // key: unique_id, value: text
             
-            // 1. Categories
+            // 1. PRIORITIZE ALLERGENS
+            $allergens = $db->fetchAll("SELECT id, name FROM allergen_types");
+            foreach ($allergens as $all) {
+                if (!empty($all['name']) && !$this->hasTranslation($all['id'], 'allergen', 'name', $l['code'])) {
+                    $batch["all_{$all['id']}_name"] = $all['name'];
+                }
+            }
+
+            // 2. Categories
             $categories = $db->fetchAll("SELECT id, name, description FROM categories");
             foreach ($categories as $cat) {
                 if (!empty($cat['name']) && !$this->hasTranslation($cat['id'], 'category', 'name', $l['code'])) {
@@ -77,7 +85,7 @@ class AIController {
                 }
             }
 
-            // 2. Products (Including serving_size)
+            // 3. Products
             $products = $db->fetchAll("SELECT id, name, description, serving_size FROM products");
             foreach ($products as $prod) {
                 if (!empty($prod['name']) && !$this->hasTranslation($prod['id'], 'product', 'name', $l['code'])) {
@@ -88,14 +96,6 @@ class AIController {
                 }
                 if (!empty($prod['serving_size']) && !$this->hasTranslation($prod['id'], 'product', 'serving_size', $l['code'])) {
                     $batch["prod_{$prod['id']}_serving"] = $prod['serving_size'];
-                }
-            }
-
-            // 3. Allergens
-            $allergens = $db->fetchAll("SELECT id, name FROM allergen_types");
-            foreach ($allergens as $all) {
-                if (!empty($all['name']) && !$this->hasTranslation($all['id'], 'allergen', 'name', $l['code'])) {
-                    $batch["all_{$all['id']}_name"] = $all['name'];
                 }
             }
 
@@ -141,7 +141,7 @@ class AIController {
                             }
                         }
                     }
-                    usleep(3000000); // 3 seconds delay between chunks
+                    usleep(6000000); // 6 seconds delay between chunks to avoid free-tier 429
                 }
             }
         }
@@ -162,7 +162,7 @@ class AIController {
     }
 
     private function callGeminiBatch(array $items, string $targetLang): ?array {
-        $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" . $this->apiKey;
+        $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" . $this->apiKey;
 
 
 
@@ -221,7 +221,7 @@ class AIController {
     }
 
     private function callGemini(string $text, string $targetLang, string $context): ?string {
-        $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" . $this->apiKey;
+        $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" . $this->apiKey;
 
 
 

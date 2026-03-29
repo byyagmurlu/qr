@@ -1,7 +1,7 @@
 import React from 'react';
 import { UI_STRINGS } from '../../i18n/translations';
 
-export default function Sidebar({ isOpen, onClose, settings, categories, activeSlug, onCategoryClick, lang }) {
+export default function Sidebar({ isOpen, onClose, settings, categories, activeSlug, onCategoryClick, lang, isRefreshing = false }) {
   if (!isOpen) return null;
 
   return (
@@ -10,7 +10,15 @@ export default function Sidebar({ isOpen, onClose, settings, categories, activeS
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
       
       {/* Content */}
-      <div className="absolute top-0 right-0 w-80 h-full bg-white shadow-2xl animate-slide-left flex flex-col">
+      <div className="absolute top-0 right-0 w-80 h-full bg-white shadow-2xl animate-slide-left flex flex-col relative">
+        
+        {/* Loading Overlay */}
+        {isRefreshing && (
+          <div className="absolute inset-0 z-[110] bg-white/40 backdrop-blur-[2px] flex items-center justify-center pointer-events-none transition-all duration-300">
+             <div className="w-8 h-8 border-3 border-forest border-t-transparent rounded-full animate-spin shadow-lg"></div>
+          </div>
+        )}
+
         {/* Header */}
         <div className="bg-[#2d3436] text-white p-5 flex items-center justify-between">
           <h2 className="font-black text-lg uppercase tracking-tighter">{UI_STRINGS[lang]?.menu || 'MENÜ'}</h2>
@@ -18,7 +26,7 @@ export default function Sidebar({ isOpen, onClose, settings, categories, activeS
         </div>
 
         {/* Info & Puanla */}
-        <div className="overflow-y-auto flex-1 scrollbar-none">
+        <div className={`overflow-y-auto flex-1 scrollbar-none transition-all duration-500 ${isRefreshing ? 'opacity-40 grayscale-[0.5]' : 'opacity-100'}`}>
           <div className="p-6 border-b border-gray-100">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 flex items-center justify-center overflow-hidden">

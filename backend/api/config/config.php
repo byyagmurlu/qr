@@ -23,7 +23,7 @@ define('DB_CHARSET', 'utf8mb4');
 define('JWT_SECRET', 'antigravity_yedidegirmenler_secret_2026_change_in_production');
 
 // AI
-define('GEMINI_API_KEY', trim('AIzaSyCbmmrXEFQvx9EnEIMVoeabhFouC8qXkVU'));
+define('GEMINI_API_KEY', trim('AIzaSyAtjED39NlYlYySidKDTqAdZbM11lxVuIk'));
 
 
 
