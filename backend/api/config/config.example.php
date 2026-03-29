@@ -1,5 +1,6 @@
 <?php
 // backend/api/config/config.php
+// Bu dosyayı config.example.php'den kopyalayın ve bilgileri doldurun.
 
 // ═══════════════════════════════════════════════════
 // YEREL GELİŞTİRME → SQLite
@@ -19,16 +20,13 @@ define('DB_PASS', '');
 define('DB_NAME', 'qrmenu_db');
 define('DB_CHARSET', 'utf8mb4');
 
-// JWT
-define('JWT_SECRET', 'antigravity_yedidegirmenler_secret_2026_change_in_production');
+// JWT - Üretimde güçlü bir secret kullanın!
+define('JWT_SECRET', 'BURAYA_GIZLI_ANAHTAR_YAZIN');
 
-// AI
-define('GEMINI_API_KEY', trim('AIzaSyAtjED39NlYlYySidKDTqAdZbM11lxVuIk'));
-
-
+// Google Gemini AI - https://aistudio.google.com adresinden alın
+define('GEMINI_API_KEY', 'BURAYA_GEMINI_API_ANAHTARINI_YAZIN');
 
 // Timezone
-
 date_default_timezone_set('Europe/Istanbul');
 
 // Hata ayarlama (production'da 0 yapın)

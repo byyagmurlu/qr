@@ -54,11 +54,8 @@ export default function BulkPage() {
   };
 
   const handleAITranslate = async (force = false) => {
-    if (force && !window.confirm('Mevcut tüm çeviriler silinecek ve yeniden yapılacak. Emin misiniz?')) {
-      return;
-    }
-
     setLoading(true);
+    console.log('AI Çeviri İsteği Gönderiliyor. Force:', force);
     try {
       const res = await api.post('v1/admin/ai/bulk-translate', { force: force ? 1 : 0 });
       const { products, categories, allergens, settings } = res.data.data;
@@ -89,11 +86,14 @@ export default function BulkPage() {
             </button>
             
             <button 
-              onClick={() => handleAITranslate(true)}
+              onClick={() => {
+                console.log('RESET Butonuna basıldı, işlem MÜDAHALESİZ başlıyor.');
+                handleAITranslate(true);
+              }}
               disabled={loading}
-              className="flex items-center gap-2 px-6 py-3 bg-red-50 text-red-600 border border-red-100 rounded-2xl font-bold hover:bg-red-100 transition disabled:opacity-50"
+              className="flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-2xl font-bold hover:bg-red-700 transition shadow-lg shadow-red-200 disabled:opacity-50 cursor-pointer active:scale-95"
             >
-              {loading ? '⏳' : '🔄 SIFIRLA VE YENİDEN ÇEVİR'}
+              {loading ? '⏳ Lütfen Bekleyin...' : '🔄 SIFIRLA VE YENİDEN ÇEVİR'}
             </button>
           </div>
         </div>
@@ -109,8 +109,8 @@ export default function BulkPage() {
               </p>
             </div>
             <div className="space-y-3 pt-4">
-              <button onClick={handleExport} className="w-full bg-forest text-white py-4 rounded-2xl font-black uppercase text-[10px] tracking-widest hover:scale-[1.02] transition shadow-lg shadow-forest/20">📊 LİSTEYİ İNDİR (CSV)</button>
-              <button onClick={handleSample} className="w-full bg-water/20 text-forest py-4 rounded-2xl font-black uppercase text-[10px] tracking-widest hover:scale-[1.02] transition flex items-center justify-center gap-2">📥 ŞABLON İNDİR</button>
+              <button onClick={handleExport} className="w-full bg-forest text-white py-4 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-[1.02] transition shadow-lg shadow-forest/20">📊 LİSTEYİ İNDİR (CSV)</button>
+              <button onClick={handleSample} className="w-full bg-water/20 text-forest py-4 rounded-2xl font-black uppercase text-sm tracking-widest hover:scale-[1.02] transition flex items-center justify-center gap-2">📥 ŞABLON İNDİR</button>
             </div>
           </div>
 
@@ -123,9 +123,9 @@ export default function BulkPage() {
             <form onSubmit={handleImport} className="space-y-4 mt-auto">
               <input id="file-upload" type="file" accept=".csv" onChange={handleFileChange} className="hidden" />
               <label htmlFor="file-upload" className="w-full flex flex-col items-center justify-center p-6 border-2 border-dashed border-forest/20 rounded-2xl cursor-pointer hover:bg-forest/5 transition-all text-center">
-                <span className="text-[10px] font-bold text-forest/60 underline uppercase tracking-tighter">{file ? file.name : 'DOSYA SEÇİN'}</span>
+                <span className="text-sm font-bold text-forest/60 underline uppercase tracking-tighter">{file ? file.name : 'DOSYA SEÇİN'}</span>
               </label>
-              <button type="submit" disabled={loading || !file} className={`w-full py-4 rounded-2xl font-black uppercase text-[10px] tracking-widest transition shadow-lg ${loading || !file ? 'bg-gray-200 text-gray-400' : 'bg-orange-500 text-white hover:scale-[1.02]'}`}>
+              <button type="submit" disabled={loading || !file} className={`w-full py-4 rounded-2xl font-black uppercase text-sm tracking-widest transition shadow-lg ${loading || !file ? 'bg-gray-200 text-gray-400' : 'bg-orange-500 text-white hover:scale-[1.02]'}`}>
                 {loading ? 'YÜKLENİYOR...' : 'SİSTEME GÖNDER'}
               </button>
             </form>
@@ -142,9 +142,9 @@ export default function BulkPage() {
               </p>
             </div>
             <button
-              onClick={handleAITranslate}
+              onClick={() => handleAITranslate(false)}
               disabled={loading}
-              className={`w-full py-5 rounded-2xl font-black uppercase text-[10px] tracking-widest transition shadow-xl ${loading ? 'bg-gray-200 text-gray-400' : 'bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:shadow-amber-200'}`}
+              className={`w-full py-5 rounded-2xl font-black uppercase text-sm tracking-widest transition shadow-xl ${loading ? 'bg-gray-200 text-gray-400' : 'bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:shadow-amber-200'}`}
             >
               🔄 TÜMÜNÜ AI İLE ÇEVİR
             </button>

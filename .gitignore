@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Environment & Secrets
+backend/api/config/config.php
+.env
+*.env
+
+# Database (SQLite - local only)
+database/*.sqlite
+database/*.db
+
+# Logs & Debug
+backend/api/ai_debug.log
+*.log
+
+# Temp / Debug Scripts
+check_models.php
+check_models_v1.php
+test_lite.php
+test_models.php
+test_models.log
+find_model.php
+run_bulk.php
+run_translate_cli.php
+working_model.txt
+backend/api/test_list_models_v1beta.php
+
+# Build output
+frontend/dist/
+frontend/.vite/
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db

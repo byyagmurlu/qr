@@ -109,8 +109,8 @@ class AIController {
             }
 
             if (!empty($batch)) {
-                // Perform translation in chunks of 30 items to be safe
-                $chunks = array_chunk($batch, 30, true);
+                // Perform translation in very small chunks (10 items) to prevent Gemini Rate Limit (Tokens per minute & Requests per minute limits)
+                $chunks = array_chunk($batch, 10, true);
                 foreach ($chunks as $chunk) {
                     $translatedBatch = $this->callGeminiBatch($chunk, $l['code']);
                     if ($translatedBatch) {
@@ -140,8 +140,11 @@ class AIController {
                                 $stats['settings']++;
                             }
                         }
+                    } else {
+                        // All retries failed
+                        Response::error('Google AI servisi kota aşımı nedeniyle şu anda yanıt veremiyor. Lütfen birkaç dakika sonra tekrar deneyin.', 429);
                     }
-                    usleep(6000000); // 6 seconds delay between chunks to avoid free-tier 429
+                    usleep(5000000); // 5 seconds default delay between chunks
                 }
             }
         }
@@ -162,7 +165,7 @@ class AIController {
     }
 
     private function callGeminiBatch(array $items, string $targetLang): ?array {
-        $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" . $this->apiKey;
+        $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" . $this->apiKey;
 
 
 
@@ -186,19 +189,46 @@ class AIController {
             'contents' => [['parts' => [['text' => $prompt]]]]
         ];
 
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-        
-        $result = curl_exec($ch);
-        $info = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $maxRetries = 10;
+        for ($i = 0; $i < $maxRetries; $i++) {
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+            
+            $result = curl_exec($ch);
+            $info = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+            if ($info === 200) {
+                break; // Success
+            } elseif ($info === 429) {
+                // Parse retryDelay dynamically from Google's response
+                $waitSecs = 20; // Default fallback to 20s
+                $respJson = json_decode($result, true);
+                if (isset($respJson['error']['details'])) {
+                    foreach ($respJson['error']['details'] as $detail) {
+                        if (isset($detail['retryDelay'])) {
+                            $waitSecs = (int)str_replace('s', '', $detail['retryDelay']) + 2; // e.g. "52s" -> 54s
+                        }
+                    }
+                }
+                
+                $retryCount = $i + 1;
+                file_put_contents('ai_debug.log', "[" . date('H:i:s') . "] [429] Google limit: Waiting {$waitSecs}s... (Attempt {$retryCount} of {$maxRetries})\n", FILE_APPEND);
+                
+                // Sleep using the explicitly requested seconds
+                sleep($waitSecs);
+                continue;
+            } else {
+                file_put_contents('ai_debug.log', "[$info] BATCH ERROR: " . $result . "\n", FILE_APPEND);
+                return null;
+            }
+        }
 
         if ($info !== 200) {
-            file_put_contents('ai_debug.log', "[$info] BATCH ERROR: " . $result . "\n", FILE_APPEND);
             return null;
         }
 
@@ -221,7 +251,7 @@ class AIController {
     }
 
     private function callGemini(string $text, string $targetLang, string $context): ?string {
-        $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" . $this->apiKey;
+        $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" . $this->apiKey;
 
 
 
