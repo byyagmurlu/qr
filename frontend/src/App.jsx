@@ -27,11 +27,11 @@ function AppRoutes() {
       <Route path="/admin/login" element={<LoginPage />} />
       <Route path="/admin" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
       <Route path="/admin/categories" element={<ProtectedRoute><CategoriesPage /></ProtectedRoute>} />
-      <Route path="/admin/products"   element={<ProtectedRoute><ProductsPage /></ProtectedRoute>} />
-      <Route path="/admin/allergens"  element={<ProtectedRoute><AllergensPage /></ProtectedRoute>} />
-      <Route path="/admin/settings"   element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
-      <Route path="/admin/bulk"       element={<ProtectedRoute><BulkPage     /></ProtectedRoute>} />
-      <Route path="/admin/profile"    element={<ProtectedRoute><ProfilePage  /></ProtectedRoute>} />
+      <Route path="/admin/products" element={<ProtectedRoute><ProductsPage /></ProtectedRoute>} />
+      <Route path="/admin/allergens" element={<ProtectedRoute><AllergensPage /></ProtectedRoute>} />
+      <Route path="/admin/settings" element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
+      <Route path="/admin/bulk" element={<ProtectedRoute><BulkPage /></ProtectedRoute>} />
+      <Route path="/admin/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
 
 
       {/* Fallback */}
