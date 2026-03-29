@@ -1,0 +1,162 @@
+GET: lang=en, type=product, id=12, field=name -> res=Grand Turkish Breakfast Spread
+GET: lang=en, type=product, id=12, field=description -> res=Enjoy a lavish breakfast spread featuring 4 types of cheese, a platter of fresh sliced vegetables, assorted olives, honey, butter, 3 varieties of jam, buttery eggs, crispy french fries, sausage, and a traditional Turkish pastry, all served with unlimited samovar tea. Pricing: 600 TL per person, with a minimum order for 2 people.
+GET: lang=en, type=product, id=12, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=10, field=name -> res=Breakfast
+GET: lang=en, type=allergen, id=4, field=name -> res=NULL
+GET: lang=en, type=allergen, id=1, field=name -> res=Test Allergen EN
+GET: lang=en, type=allergen, id=2, field=name -> res=NULL
+GET: lang=en, type=allergen, id=3, field=name -> res=NULL
+GET: lang=en, type=product, id=13, field=name -> res=Turkish Cheese Fondue (Muhlama / Kuymak)
+GET: lang=en, type=product, id=13, field=description -> res=A hot, gooey, and stretchy regional delight prepared with butter, special cheese, and corn flour.
+GET: lang=en, type=product, id=13, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=10, field=name -> res=Breakfast
+GET: lang=en, type=allergen, id=6, field=name -> res=NULL
+GET: lang=en, type=allergen, id=7, field=name -> res=NULL
+GET: lang=en, type=allergen, id=2, field=name -> res=NULL
+GET: lang=en, type=product, id=15, field=name -> res=Traditional Turkish Scrambled Eggs (Menemen)
+GET: lang=en, type=product, id=15, field=description -> res=Traditional Menemen prepared with tomatoes, green peppers, and eggs, served hot.
+GET: lang=en, type=product, id=15, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=10, field=name -> res=Breakfast
+GET: lang=en, type=allergen, id=2, field=name -> res=NULL
+GET: lang=en, type=allergen, id=3, field=name -> res=NULL
+GET: lang=en, type=product, id=14, field=name -> res=Eggs with Turkish Sausage
+GET: lang=en, type=product, id=14, field=description -> res=A breakfast classic prepared with pan-fried eggs and delicious slices of Turkish sucuk sausage.
+GET: lang=en, type=product, id=14, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=10, field=name -> res=Breakfast
+GET: lang=en, type=allergen, id=5, field=name -> res=NULL
+GET: lang=en, type=allergen, id=2, field=name -> res=NULL
+GET: lang=en, type=allergen, id=3, field=name -> res=NULL
+GET: lang=en, type=product, id=16, field=name -> res=Eggs with Braised Meat
+GET: lang=en, type=product, id=16, field=description -> res=A hearty breakfast option where carefully braised meat meets eggs.
+GET: lang=en, type=product, id=16, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=10, field=name -> res=Breakfast
+GET: lang=en, type=allergen, id=5, field=name -> res=NULL
+GET: lang=en, type=allergen, id=3, field=name -> res=NULL
+GET: lang=en, type=product, id=23, field=name -> res=Lamb Chops
+GET: lang=en, type=product, id=23, field=description -> res=Carefully prepared lamb chops, served with rice, French fries, and grilled vegetables.
+GET: lang=en, type=product, id=23, field=serving_size -> res=Test Portion EN
+GET: lang=en, type=category, id=14, field=name -> res=Chops
+GET: lang=en, type=allergen, id=8, field=name -> res=NULL
+GET: lang=en, type=allergen, id=1, field=name -> res=Test Allergen EN
+GET: lang=en, type=product, id=25, field=name -> res=1 kg Lamb Chops
+GET: lang=en, type=product, id=25, field=description -> res=A large, shareable portion of lamb chops, perfect for groups, served with a side salad. Rice is an extra.
+GET: lang=en, type=product, id=25, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=14, field=name -> res=Chops
+GET: lang=en, type=allergen, id=8, field=name -> res=NULL
+GET: lang=en, type=product, id=24, field=name -> res=1/2 kg Lamb Chops
+GET: lang=en, type=product, id=24, field=description -> res=A generous, shareable portion of lamb chops, served with a side salad. Rice is an extra.
+GET: lang=en, type=product, id=24, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=14, field=name -> res=Chops
+GET: lang=en, type=allergen, id=8, field=name -> res=NULL
+GET: lang=en, type=product, id=19, field=name -> res=Grilled Meatballs Platter
+GET: lang=en, type=product, id=19, field=description -> res=Flavorful meatballs prepared from a blend of lamb and mutton, served with rice, crispy french fries, and grilled vegetables.
+GET: lang=en, type=product, id=19, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=12, field=name -> res=Meatball Dishes
+GET: lang=en, type=allergen, id=8, field=name -> res=NULL
+GET: lang=en, type=allergen, id=1, field=name -> res=Test Allergen EN
+GET: lang=en, type=product, id=20, field=name -> res=Kilogram of Grilled Meatballs
+GET: lang=en, type=product, id=20, field=description -> res=A generous platter of Kofte perfect for sharing, served with a fresh salad. Rice can be ordered separately.
+GET: lang=en, type=product, id=20, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=12, field=name -> res=Meatball Dishes
+GET: lang=en, type=allergen, id=8, field=name -> res=NULL
+GET: lang=en, type=allergen, id=1, field=name -> res=Test Allergen EN
+GET: lang=en, type=product, id=21, field=name -> res=Clay Pot Beef Sauté
+GET: lang=en, type=product, id=21, field=description -> res=Tender, melt-in-your-mouth meat (cooked 'lokum' style) prepared in a traditional clay pot with fresh vegetables and a special rich sauce, served hot.
+GET: lang=en, type=product, id=21, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=13, field=name -> res=Meat Dishes
+GET: lang=en, type=allergen, id=8, field=name -> res=NULL
+GET: lang=en, type=product, id=22, field=name -> res=Sac Kavurma (Traditional Sautéed Meat)
+GET: lang=en, type=product, id=22, field=description -> res=A richly flavorful main course featuring diced meat sautéed with vegetables and spices on a traditional 'sac' griddle.
+GET: lang=en, type=product, id=22, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=13, field=name -> res=Meat Dishes
+GET: lang=en, type=allergen, id=8, field=name -> res=NULL
+GET: lang=en, type=product, id=26, field=name -> res=Grilled Chicken
+GET: lang=en, type=product, id=26, field=description -> res=Carefully grilled chicken, served with rice, French fries, and grilled vegetables.
+GET: lang=en, type=product, id=26, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=15, field=name -> res=Chicken Dishes
+GET: lang=en, type=allergen, id=9, field=name -> res=NULL
+GET: lang=en, type=allergen, id=1, field=name -> res=Test Allergen EN
+GET: lang=en, type=product, id=28, field=name -> res=Sautéed Chicken
+GET: lang=en, type=product, id=28, field=description -> res=Chicken breast sautéed with fresh vegetables, served with rice, French fries, and grilled vegetables.
+GET: lang=en, type=product, id=28, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=15, field=name -> res=Chicken Dishes
+GET: lang=en, type=allergen, id=9, field=name -> res=NULL
+GET: lang=en, type=allergen, id=1, field=name -> res=Test Allergen EN
+GET: lang=en, type=product, id=27, field=name -> res=1 kg Grilled Chicken
+GET: lang=en, type=product, id=27, field=description -> res=A generous, shareable portion of grilled chicken, ideal for large gatherings, served hot and fresh.
+GET: lang=en, type=product, id=27, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=15, field=name -> res=Chicken Dishes
+GET: lang=en, type=allergen, id=9, field=name -> res=NULL
+GET: lang=en, type=product, id=29, field=name -> res=Yedideğirmen Special Mixed Grill
+GET: lang=en, type=product, id=29, field=description -> res=A special mixed grill platter featuring 2 köfte (meatballs), 2 grilled chicken pieces, 1 chicken shish, and 2 lamb chops.
+GET: lang=en, type=product, id=29, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=16, field=name -> res=Specialty Grills
+GET: lang=en, type=allergen, id=8, field=name -> res=NULL
+GET: lang=en, type=allergen, id=9, field=name -> res=NULL
+GET: lang=en, type=allergen, id=1, field=name -> res=Test Allergen EN
+GET: lang=en, type=product, id=17, field=name -> res=Lentil Soup
+GET: lang=en, type=product, id=17, field=description -> res=Classic lentil soup, rich and velvety, served hot and perfect for any time of day.
+GET: lang=en, type=product, id=17, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=11, field=name -> res=Soups
+GET: lang=en, type=allergen, id=1, field=name -> res=Test Allergen EN
+GET: lang=en, type=allergen, id=2, field=name -> res=NULL
+GET: lang=en, type=product, id=18, field=name -> res=Black Sea Cabbage Soup
+GET: lang=en, type=product, id=18, field=description -> res=A beloved specialty of Black Sea cuisine; this hot soup is prepared with tender cabbage, authentic regional ingredients, and special spices.
+GET: lang=en, type=product, id=18, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=11, field=name -> res=Soups
+GET: lang=en, type=allergen, id=1, field=name -> res=Test Allergen EN
+GET: lang=en, type=allergen, id=2, field=name -> res=NULL
+GET: lang=en, type=product, id=30, field=name -> res=Baked Rice Pudding (Sütlaç)
+GET: lang=en, type=product, id=30, field=description -> res=Creamy baked rice pudding, served topped with crushed hazelnuts.
+GET: lang=en, type=product, id=30, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=17, field=name -> res=Desserts
+GET: lang=en, type=allergen, id=4, field=name -> res=NULL
+GET: lang=en, type=allergen, id=2, field=name -> res=NULL
+GET: lang=en, type=product, id=31, field=name -> res=Water
+GET: lang=en, type=product, id=31, field=description -> res=Refreshing drinking water.
+GET: lang=en, type=product, id=31, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=18, field=name -> res=Beverages
+GET: lang=en, type=product, id=32, field=name -> res=Turkish Tea
+GET: lang=en, type=product, id=32, field=description -> res=Freshly brewed traditional Turkish tea.
+GET: lang=en, type=product, id=32, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=18, field=name -> res=Beverages
+GET: lang=en, type=product, id=33, field=name -> res=Small Samovar Tea
+GET: lang=en, type=product, id=33, field=description -> res=A small samovar of freshly brewed tea, perfect for sharing.
+GET: lang=en, type=product, id=33, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=19, field=name -> res=Samovar Tea
+GET: lang=en, type=product, id=34, field=name -> res=Medium Samovar Tea
+GET: lang=en, type=product, id=34, field=description -> res=A medium samovar of freshly brewed tea, ideal for families and groups of friends.
+GET: lang=en, type=product, id=34, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=19, field=name -> res=Samovar Tea
+GET: lang=en, type=product, id=35, field=name -> res=Large Samovar Tea
+GET: lang=en, type=product, id=35, field=description -> res=A large samovar of freshly brewed tea, suitable for bigger gatherings.
+GET: lang=en, type=product, id=35, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=19, field=name -> res=Samovar Tea
+GET: lang=en, type=product, id=36, field=name -> res=1 Liter Cola
+GET: lang=en, type=product, id=36, field=description -> res=1 liter Cola, served chilled.
+GET: lang=en, type=product, id=36, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=18, field=name -> res=Beverages
+GET: lang=en, type=product, id=37, field=name -> res=1 Liter Orange Soda
+GET: lang=en, type=product, id=37, field=description -> res=A 1-liter orange-flavored carbonated drink, served chilled.
+GET: lang=en, type=product, id=37, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=18, field=name -> res=Beverages
+GET: lang=en, type=product, id=38, field=name -> res=Canned Cola
+GET: lang=en, type=product, id=38, field=description -> res=Canned cola, served chilled.
+GET: lang=en, type=product, id=38, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=18, field=name -> res=Beverages
+GET: lang=en, type=product, id=39, field=name -> res=Canned Fruit Juice
+GET: lang=en, type=product, id=39, field=description -> res=Canned fruit juice available in various fruit flavors, served chilled.
+GET: lang=en, type=product, id=39, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=18, field=name -> res=Beverages
+GET: lang=en, type=product, id=40, field=name -> res=Canned Iced Tea
+GET: lang=en, type=product, id=40, field=description -> res=Refreshing canned iced tea, served chilled.
+GET: lang=en, type=product, id=40, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=18, field=name -> res=Beverages
+GET: lang=en, type=product, id=41, field=name -> res=Plain Mineral Water
+GET: lang=en, type=product, id=41, field=description -> res=Plain mineral water, served chilled.
+GET: lang=en, type=product, id=41, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=18, field=name -> res=Beverages
+GET: lang=en, type=product, id=42, field=name -> res=Fruit-Flavored Mineral Water
+GET: lang=en, type=product, id=42, field=description -> res=Fruit-flavored mineral water, served chilled.
+GET: lang=en, type=product, id=42, field=serving_size -> res=NULL
+GET: lang=en, type=category, id=18, field=name -> res=Beverages

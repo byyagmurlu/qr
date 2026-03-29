@@ -20,6 +20,7 @@ class TranslationController {
     public function store(array $params): void {
         Auth::requireAuth();
         $body = json_decode(file_get_contents('php://input'), true) ?? [];
+        file_put_contents('trans_debug.log', "POST body: " . json_encode($body) . "\n", FILE_APPEND);
         
         if (empty($body['translations']) || !is_array($body['translations'])) {
             Response::error('Çeviri verisi eksik.', 422);

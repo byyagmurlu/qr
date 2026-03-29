@@ -18,7 +18,9 @@ class Translation {
              WHERE language_code = ? AND entity_type = ? AND entity_id = ? AND field_name = ?",
             [$lang, $entityType, $entityId, $fieldName]
         );
-        return $row ? $row['translation_text'] : null;
+        $res = $row ? $row['translation_text'] : null;
+        file_put_contents('trans_query.log', "GET: lang=$lang, type=$entityType, id=$entityId, field=$fieldName -> res=" . ($res ?? 'NULL') . "\n", FILE_APPEND);
+        return $res;
     }
 
     public function set(string $lang, string $entityType, int $entityId, string $fieldName, string $text): bool {
