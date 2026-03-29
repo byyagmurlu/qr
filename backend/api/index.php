@@ -4,6 +4,25 @@ if (php_sapi_name() === 'cli-server' && is_file(__DIR__ . parse_url($_SERVER['RE
     return false;
 }
 
+// =============================================
+// SECURITY HEADERS
+// =============================================
+header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: DENY');
+header('X-XSS-Protection: 1; mode=block');
+header('Referrer-Policy: strict-origin-when-cross-origin');
+header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
+
+// CORS
+$allowedOrigins = defined('ALLOWED_ORIGINS') ? explode(',', ALLOWED_ORIGINS) : ['http://localhost:5173', 'http://localhost:5174'];
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (in_array($origin, $allowedOrigins) || empty($origin)) {
+    header('Access-Control-Allow-Origin: ' . ($origin ?: '*'));
+}
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type, Authorization');
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { http_response_code(204); exit; }
+
 // Autoloader: maps Namespace\ClassName -> ./namespace/ClassName.php (lowercase dirs)
 spl_autoload_register(function ($class) {
     $path = str_replace('\\', '/', $class) . '.php';
@@ -72,9 +91,10 @@ $router->get('v1/languages', [LanguageController::class, 'index']);
 // =============================================
 // ADMIN AUTH
 // =============================================
-$router->post('v1/admin/auth/login',           [AuthController::class, 'login']);
-$router->get('v1/admin/auth/me',               [AuthController::class, 'me']);
-$router->post('v1/admin/auth/change-password', [AuthController::class, 'changePassword']);
+$router->post('v1/admin/auth/login',            [AuthController::class, 'login']);
+$router->get('v1/admin/auth/me',                [AuthController::class, 'me']);
+$router->put('v1/admin/auth/profile',           [AuthController::class, 'updateProfile']);
+$router->post('v1/admin/auth/change-password',  [AuthController::class, 'changePassword']);
 
 // =============================================
 // ADMIN SETTINGS

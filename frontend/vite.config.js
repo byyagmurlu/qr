@@ -9,6 +9,7 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
+    allowedHosts: 'all',
     proxy: {
       '/backend/api': {
         target: 'http://localhost:8080',
@@ -23,7 +24,6 @@ export default defineConfig({
         proxyTimeout: 600000,
         timeout: 600000
       }
-
     }
   }
 })

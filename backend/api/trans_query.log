@@ -6905,3 +6905,349 @@ GET: lang=en, type=product, id=42, field=name -> res=Fruit Soda
 GET: lang=en, type=product, id=42, field=description -> res=Fruit-flavored mineral water, served chilled.
 GET: lang=en, type=product, id=42, field=serving_size -> res=NULL
 GET: lang=en, type=category, id=18, field=name -> res=Drinks
+GET: lang=ar, type=category, id=10, field=name -> res=الإفطار
+GET: lang=ar, type=category, id=14, field=name -> res=ريش
+GET: lang=ar, type=category, id=12, field=name -> res=أطباق الكفتة
+GET: lang=ar, type=category, id=13, field=name -> res=أطباق اللحوم
+GET: lang=ar, type=category, id=15, field=name -> res=أطباق الدجاج
+GET: lang=ar, type=category, id=16, field=name -> res=مشاوي خاصة
+GET: lang=ar, type=category, id=11, field=name -> res=أنواع الحساء
+GET: lang=ar, type=category, id=17, field=name -> res=الحلويات
+GET: lang=ar, type=category, id=19, field=name -> res=شاي السماور
+GET: lang=ar, type=category, id=18, field=name -> res=المشروبات
+GET: lang=ar, type=product, id=12, field=name -> res=إفطار متنوع (سربمة)
+GET: lang=ar, type=product, id=12, field=description -> res=استمتع بوجبة إفطار غنية تضم 4 أنواع من الجبن، طبق خضروات ومقبلات باردة، تشكيلة زيتون، عسل، زبدة، 3 أنواع من المربى، بيض بالزبدة، بطاطس مقلية، سجق، بوراك، بالإضافة إلى شاي سماور غير محدود.
+ملاحظة الخدمة: 600 ليرة تركية للشخص الواحد، الحد الأدنى للطلب شخصان.
+GET: lang=ar, type=product, id=12, field=serving_size -> res=لشخصين
+GET: lang=ar, type=category, id=10, field=name -> res=الإفطار
+GET: lang=ar, type=allergen, id=4, field=name -> res=مكسرات
+GET: lang=ar, type=allergen, id=1, field=name -> res=غلوتين
+GET: lang=ar, type=allergen, id=2, field=name -> res=حليب ومنتجات الألبان
+GET: lang=ar, type=allergen, id=3, field=name -> res=بيض
+GET: lang=ar, type=product, id=13, field=name -> res=محلمة (كويماك)
+GET: lang=ar, type=product, id=13, field=description -> res=طبق محلي ساخن ومطاطي محضر من الزبدة، الجبن الخاص ودقيق الذرة.
+GET: lang=ar, type=product, id=13, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=10, field=name -> res=الإفطار
+GET: lang=ar, type=allergen, id=6, field=name -> res=خالي من الغلوتين *قد يحتوي على آثار من الغلوتين بسبب بيئة المطبخ.
+GET: lang=ar, type=allergen, id=7, field=name -> res=ذرة
+GET: lang=ar, type=allergen, id=2, field=name -> res=حليب ومنتجات الألبان
+GET: lang=ar, type=product, id=15, field=name -> res=منمن
+GET: lang=ar, type=product, id=15, field=description -> res=منمن تقليدي محضر من الطماطم والفلفل والبيض، يقدم ساخناً.
+GET: lang=ar, type=product, id=15, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=10, field=name -> res=الإفطار
+GET: lang=ar, type=allergen, id=2, field=name -> res=حليب ومنتجات الألبان
+GET: lang=ar, type=allergen, id=3, field=name -> res=بيض
+GET: lang=ar, type=product, id=14, field=name -> res=بيض بالسجق
+GET: lang=ar, type=product, id=14, field=description -> res=طبق إفطار كلاسيكي محضر من البيض المقلي وشرائح السجق اللذيذة.
+GET: lang=ar, type=product, id=14, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=10, field=name -> res=الإفطار
+GET: lang=ar, type=allergen, id=5, field=name -> res=لحم بقري
+GET: lang=ar, type=allergen, id=2, field=name -> res=حليب ومنتجات الألبان
+GET: lang=ar, type=allergen, id=3, field=name -> res=بيض
+GET: lang=ar, type=product, id=16, field=name -> res=بيض بالقاورما
+GET: lang=ar, type=product, id=16, field=description -> res=وجبة إفطار مشبعة تجمع بين القاورما المطبوخة بعناية والبيض.
+GET: lang=ar, type=product, id=16, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=10, field=name -> res=الإفطار
+GET: lang=ar, type=allergen, id=5, field=name -> res=لحم بقري
+GET: lang=ar, type=allergen, id=3, field=name -> res=بيض
+GET: lang=ar, type=product, id=23, field=name -> res=ريش غنم (حصة)
+GET: lang=ar, type=product, id=23, field=description -> res=ريش غنم مطهوة بعناية؛ تُقدم مع الأرز والبطاطس المقلية والخضروات المشوية.
+GET: lang=ar, type=product, id=23, field=serving_size -> res=250 جرام
+GET: lang=ar, type=category, id=14, field=name -> res=ريش
+GET: lang=ar, type=allergen, id=8, field=name -> res=لحم غنم
+GET: lang=ar, type=allergen, id=1, field=name -> res=غلوتين
+GET: lang=ar, type=product, id=25, field=name -> res=ريش بالكيلو
+GET: lang=ar, type=product, id=25, field=description -> res=كمية وفيرة من ريش الغنم مناسبة للموائد الكبيرة؛ تُقدم مع سلطة جانبية. الأرز يُطلب بشكل إضافي.
+GET: lang=ar, type=product, id=25, field=serving_size -> res=1000 جرام
+GET: lang=ar, type=category, id=14, field=name -> res=ريش
+GET: lang=ar, type=allergen, id=8, field=name -> res=لحم غنم
+GET: lang=ar, type=product, id=24, field=name -> res=نصف كيلو ريش
+GET: lang=ar, type=product, id=24, field=description -> res=خدمة ريش غنم للمشاركة؛ تُقدم مع سلطة جانبية. الأرز يُطلب بشكل إضافي.
+GET: lang=ar, type=product, id=24, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=14, field=name -> res=ريش
+GET: lang=ar, type=allergen, id=8, field=name -> res=لحم غنم
+GET: lang=ar, type=product, id=19, field=name -> res=كفتة (حصة)
+GET: lang=ar, type=product, id=19, field=description -> res=كفتة محضرة من لحم الغنم والضأن؛ تُقدم مع الأرز والبطاطس المقلية والخضروات المشوية.
+GET: lang=ar, type=product, id=19, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=12, field=name -> res=أطباق الكفتة
+GET: lang=ar, type=allergen, id=8, field=name -> res=لحم غنم
+GET: lang=ar, type=allergen, id=1, field=name -> res=غلوتين
+GET: lang=ar, type=product, id=20, field=name -> res=كفتة بالكيلو
+GET: lang=ar, type=product, id=20, field=description -> res=خدمة كفتة للمشاركة؛ تُقدم مع سلطة جانبية. يمكن طلب الأرز بشكل إضافي.
+GET: lang=ar, type=product, id=20, field=serving_size -> res=1000 جرام
+GET: lang=ar, type=category, id=12, field=name -> res=أطباق الكفتة
+GET: lang=ar, type=allergen, id=8, field=name -> res=لحم غنم
+GET: lang=ar, type=allergen, id=1, field=name -> res=غلوتين
+GET: lang=ar, type=product, id=21, field=name -> res=لحم سوتيه في الفخار
+GET: lang=ar, type=product, id=21, field=description -> res=لحم مطهو حتى يصبح طريًا كالملبن، يُحضّر في طاجن مع الخضروات وصلصة خاصة؛ يُقدم ساخنًا.
+GET: lang=ar, type=product, id=21, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=13, field=name -> res=أطباق اللحوم
+GET: lang=ar, type=allergen, id=8, field=name -> res=لحم غنم
+GET: lang=ar, type=product, id=22, field=name -> res=قاورما الصاج
+GET: lang=ar, type=product, id=22, field=description -> res=طبق رئيسي غني بالنكهة، يُطهى فيه اللحم المكعبات على الصاج مع الخضروات والبهارات.
+GET: lang=ar, type=product, id=22, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=13, field=name -> res=أطباق اللحوم
+GET: lang=ar, type=allergen, id=8, field=name -> res=لحم غنم
+GET: lang=ar, type=product, id=26, field=name -> res=دجاج مشوي (حصة)
+GET: lang=ar, type=product, id=26, field=description -> res=دجاج مشوي بعناية على الشواية؛ يُقدم مع الأرز والبطاطس المقلية والخضروات المشوية.
+GET: lang=ar, type=product, id=26, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=15, field=name -> res=أطباق الدجاج
+GET: lang=ar, type=allergen, id=9, field=name -> res=دجاج
+GET: lang=ar, type=allergen, id=1, field=name -> res=غلوتين
+GET: lang=ar, type=product, id=28, field=name -> res=دجاج سوتيه
+GET: lang=ar, type=product, id=28, field=description -> res=لحم دجاج سوتيه مع الخضروات؛ يُقدم مع الأرز والبطاطس المقلية والخضروات المشوية.
+GET: lang=ar, type=product, id=28, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=15, field=name -> res=أطباق الدجاج
+GET: lang=ar, type=allergen, id=9, field=name -> res=دجاج
+GET: lang=ar, type=allergen, id=1, field=name -> res=غلوتين
+GET: lang=ar, type=product, id=27, field=name -> res=دجاج مشوي بالكيلو
+GET: lang=ar, type=product, id=27, field=description -> res=دجاج مشوي للمشاركة؛ مثالي للموائد الكبيرة، يُقدم ساخنًا وطازجًا.
+GET: lang=ar, type=product, id=27, field=serving_size -> res=1000 جرام
+GET: lang=ar, type=category, id=15, field=name -> res=أطباق الدجاج
+GET: lang=ar, type=allergen, id=9, field=name -> res=دجاج
+GET: lang=ar, type=product, id=29, field=name -> res=مشاوي يدي دييرمان الخاصة
+GET: lang=ar, type=product, id=29, field=description -> res=طبق مشاوي مشكل خاص يتكون من 2 كفتة، 2 دجاج مشوي، سيخ شيش طاووق واحد و2 ريش غنم.
+GET: lang=ar, type=product, id=29, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=16, field=name -> res=مشاوي خاصة
+GET: lang=ar, type=allergen, id=8, field=name -> res=لحم غنم
+GET: lang=ar, type=allergen, id=9, field=name -> res=دجاج
+GET: lang=ar, type=allergen, id=1, field=name -> res=غلوتين
+GET: lang=ar, type=product, id=17, field=name -> res=شوربة العدس
+GET: lang=ar, type=product, id=17, field=description -> res=شوربة العدس الكلاسيكية، مناسبة لكل الأوقات، تقدم دسمة وساخنة.
+GET: lang=ar, type=product, id=17, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=11, field=name -> res=أنواع الحساء
+GET: lang=ar, type=allergen, id=1, field=name -> res=غلوتين
+GET: lang=ar, type=allergen, id=2, field=name -> res=حليب ومنتجات الألبان
+GET: lang=ar, type=product, id=18, field=name -> res=شوربة الملفوف المحلية
+GET: lang=ar, type=product, id=18, field=description -> res=المذاق المفضل لمطبخ البحر الأسود؛ شوربة ساخنة محضرة من الملفوف ومكونات محلية وبهارات خاصة.
+GET: lang=ar, type=product, id=18, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=11, field=name -> res=أنواع الحساء
+GET: lang=ar, type=allergen, id=1, field=name -> res=غلوتين
+GET: lang=ar, type=allergen, id=2, field=name -> res=حليب ومنتجات الألبان
+GET: lang=ar, type=product, id=30, field=name -> res=أرز بالحليب
+GET: lang=ar, type=product, id=30, field=description -> res=أرز بالحليب كريمي مخبوز بالفرن، يُقدم مع البندق على الوجه.
+GET: lang=ar, type=product, id=30, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=17, field=name -> res=الحلويات
+GET: lang=ar, type=allergen, id=4, field=name -> res=مكسرات
+GET: lang=ar, type=allergen, id=2, field=name -> res=حليب ومنتجات الألبان
+GET: lang=ar, type=product, id=31, field=name -> res=ماء
+GET: lang=ar, type=product, id=31, field=description -> res=ماء شرب منعش.
+GET: lang=ar, type=product, id=31, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=18, field=name -> res=المشروبات
+GET: lang=ar, type=product, id=32, field=name -> res=شاي
+GET: lang=ar, type=product, id=32, field=description -> res=شاي تركي تقليدي مخمر طازجًا.
+GET: lang=ar, type=product, id=32, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=18, field=name -> res=المشروبات
+GET: lang=ar, type=product, id=33, field=name -> res=سماور صغير
+GET: lang=ar, type=product, id=33, field=description -> res=شاي سماور بحجم صغير، مخمر طازجًا، مناسب للمشاركة.
+GET: lang=ar, type=product, id=33, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=19, field=name -> res=شاي السماور
+GET: lang=ar, type=product, id=34, field=name -> res=سماور متوسط
+GET: lang=ar, type=product, id=34, field=description -> res=شاي سماور بحجم متوسط، مثالي للعائلات ومجموعات الأصدقاء.
+GET: lang=ar, type=product, id=34, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=19, field=name -> res=شاي السماور
+GET: lang=ar, type=product, id=35, field=name -> res=سماور كبير
+GET: lang=ar, type=product, id=35, field=description -> res=شاي سماور بحجم كبير، مناسب للموائد الكبيرة.
+GET: lang=ar, type=product, id=35, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=19, field=name -> res=شاي السماور
+GET: lang=ar, type=product, id=36, field=name -> res=كولا 1 لتر
+GET: lang=ar, type=product, id=36, field=description -> res=كولا 1 لتر تُقدم باردة.
+GET: lang=ar, type=product, id=36, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=18, field=name -> res=المشروبات
+GET: lang=ar, type=product, id=37, field=name -> res=مشروب غازي بالبرتقال 1 لتر
+GET: lang=ar, type=product, id=37, field=description -> res=مشروب غازي بالبرتقال 1 لتر يُقدم باردًا.
+GET: lang=ar, type=product, id=37, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=18, field=name -> res=المشروبات
+GET: lang=ar, type=product, id=38, field=name -> res=كولا علبة
+GET: lang=ar, type=product, id=38, field=description -> res=كولا علبة تُقدم باردة.
+GET: lang=ar, type=product, id=38, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=18, field=name -> res=المشروبات
+GET: lang=ar, type=product, id=39, field=name -> res=عصير فواكه علبة
+GET: lang=ar, type=product, id=39, field=description -> res=عصير فواكه معلب، متوفر بنكهات متنوعة ويُقدم باردًا.
+GET: lang=ar, type=product, id=39, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=18, field=name -> res=المشروبات
+GET: lang=ar, type=product, id=40, field=name -> res=شاي مثلج علبة
+GET: lang=ar, type=product, id=40, field=description -> res=شاي مثلج معلب منعش يُقدم باردًا.
+GET: lang=ar, type=product, id=40, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=18, field=name -> res=المشروبات
+GET: lang=ar, type=product, id=41, field=name -> res=مياه غازية سادة
+GET: lang=ar, type=product, id=41, field=description -> res=مياه غازية سادة تُقدم باردة.
+GET: lang=ar, type=product, id=41, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=18, field=name -> res=المشروبات
+GET: lang=ar, type=product, id=42, field=name -> res=صودا فواكه
+GET: lang=ar, type=product, id=42, field=description -> res=مياه معدنية بنكهة الفاكهة، تقدم باردة.
+GET: lang=ar, type=product, id=42, field=serving_size -> res=NULL
+GET: lang=ar, type=category, id=18, field=name -> res=المشروبات
+GET: lang=ru, type=category, id=10, field=name -> res=Завтраки
+GET: lang=ru, type=category, id=14, field=name -> res=Отбивные
+GET: lang=ru, type=category, id=12, field=name -> res=Блюда из котлет
+GET: lang=ru, type=category, id=13, field=name -> res=Мясные блюда
+GET: lang=ru, type=category, id=15, field=name -> res=Блюда из курицы
+GET: lang=ru, type=category, id=16, field=name -> res=Фирменные блюда на гриле
+GET: lang=ru, type=category, id=11, field=name -> res=Супы
+GET: lang=ru, type=category, id=17, field=name -> res=Десерты
+GET: lang=ru, type=category, id=19, field=name -> res=Чай из самовара
+GET: lang=ru, type=category, id=18, field=name -> res=Напитки
+GET: lang=ru, type=product, id=12, field=name -> res=Разнообразный завтрак 'Серпме'
+GET: lang=ru, type=product, id=12, field=description -> res=Обильный завтрак с 4 видами сыра, тарелкой свежих овощей, различными оливками, медом, сливочным маслом, 3 видами варенья, яичницей на сливочном масле, картофелем фри, сосисками, бёреком (слоёным пирогом) и неограниченным чаем из самовара.
+Стоимость: 600 TL на человека, минимальный заказ для 2-х персон.
+GET: lang=ru, type=product, id=12, field=serving_size -> res=На 2 персоны
+GET: lang=ru, type=category, id=10, field=name -> res=Завтраки
+GET: lang=ru, type=allergen, id=4, field=name -> res=Орехи
+GET: lang=ru, type=allergen, id=1, field=name -> res=Глютен
+GET: lang=ru, type=allergen, id=2, field=name -> res=Молоко и молочные продукты
+GET: lang=ru, type=allergen, id=3, field=name -> res=Яйца
+GET: lang=ru, type=product, id=13, field=name -> res=Мухлама (Куймак)
+GET: lang=ru, type=product, id=13, field=description -> res=Горячее, тягучее региональное блюдо, приготовленное из сливочного масла, особого сыра и кукурузной муки.
+GET: lang=ru, type=product, id=13, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=10, field=name -> res=Завтраки
+GET: lang=ru, type=allergen, id=6, field=name -> res=Без глютена *Может содержать следы глютена из-за особенностей приготовления на кухне.
+GET: lang=ru, type=allergen, id=7, field=name -> res=Кукуруза
+GET: lang=ru, type=allergen, id=2, field=name -> res=Молоко и молочные продукты
+GET: lang=ru, type=product, id=15, field=name -> res=Менемен
+GET: lang=ru, type=product, id=15, field=description -> res=Традиционный менемен, приготовленный из помидоров, перца и яиц, подается горячим.
+GET: lang=ru, type=product, id=15, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=10, field=name -> res=Завтраки
+GET: lang=ru, type=allergen, id=2, field=name -> res=Молоко и молочные продукты
+GET: lang=ru, type=allergen, id=3, field=name -> res=Яйца
+GET: lang=ru, type=product, id=14, field=name -> res=Яичница с суджуком
+GET: lang=ru, type=product, id=14, field=description -> res=Классический завтрак: яйца, приготовленные на сковороде, с кусочками вкусного суджука.
+GET: lang=ru, type=product, id=14, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=10, field=name -> res=Завтраки
+GET: lang=ru, type=allergen, id=5, field=name -> res=Телятина
+GET: lang=ru, type=allergen, id=2, field=name -> res=Молоко и молочные продукты
+GET: lang=ru, type=allergen, id=3, field=name -> res=Яйца
+GET: lang=ru, type=product, id=16, field=name -> res=Яичница с кавурмой
+GET: lang=ru, type=product, id=16, field=description -> res=Сытное блюдо для завтрака, сочетающее тщательно приготовленную кавурму и яйца.
+GET: lang=ru, type=product, id=16, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=10, field=name -> res=Завтраки
+GET: lang=ru, type=allergen, id=5, field=name -> res=Телятина
+GET: lang=ru, type=allergen, id=3, field=name -> res=Яйца
+GET: lang=ru, type=product, id=23, field=name -> res=Порция бараньих ребрышек
+GET: lang=ru, type=product, id=23, field=description -> res=Тщательно приготовленные бараньи ребрышки; подаются с рисом, картофелем фри и овощами на гриле.
+GET: lang=ru, type=product, id=23, field=serving_size -> res=250 г
+GET: lang=ru, type=category, id=14, field=name -> res=Отбивные
+GET: lang=ru, type=allergen, id=8, field=name -> res=Баранина
+GET: lang=ru, type=allergen, id=1, field=name -> res=Глютен
+GET: lang=ru, type=product, id=25, field=name -> res=Бараньи ребрышки (1 кг)
+GET: lang=ru, type=product, id=25, field=description -> res=Большая порция бараньих ребрышек, идеально подходящая для большой компании; подается с салатом. Рис заказывается дополнительно.
+GET: lang=ru, type=product, id=25, field=serving_size -> res=1000 г
+GET: lang=ru, type=category, id=14, field=name -> res=Отбивные
+GET: lang=ru, type=allergen, id=8, field=name -> res=Баранина
+GET: lang=ru, type=product, id=24, field=name -> res=Бараньи ребрышки (0,5 кг)
+GET: lang=ru, type=product, id=24, field=description -> res=Подача бараньих ребрышек для компании; подается с салатом. Рис заказывается дополнительно.
+GET: lang=ru, type=product, id=24, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=14, field=name -> res=Отбивные
+GET: lang=ru, type=allergen, id=8, field=name -> res=Баранина
+GET: lang=ru, type=product, id=19, field=name -> res=Порция Кёфте
+GET: lang=ru, type=product, id=19, field=description -> res=Котлеты из баранины и ягнятины; подаются с рисом, картофелем фри и овощами на гриле.
+GET: lang=ru, type=product, id=19, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=12, field=name -> res=Блюда из котлет
+GET: lang=ru, type=allergen, id=8, field=name -> res=Баранина
+GET: lang=ru, type=allergen, id=1, field=name -> res=Глютен
+GET: lang=ru, type=product, id=20, field=name -> res=Кёфте (1 кг)
+GET: lang=ru, type=product, id=20, field=description -> res=Подача кёфте для компании; подается с салатом. Рис можно заказать дополнительно.
+GET: lang=ru, type=product, id=20, field=serving_size -> res=1000 г
+GET: lang=ru, type=category, id=12, field=name -> res=Блюда из котлет
+GET: lang=ru, type=allergen, id=8, field=name -> res=Баранина
+GET: lang=ru, type=allergen, id=1, field=name -> res=Глютен
+GET: lang=ru, type=product, id=21, field=name -> res=Соте из мяса в глиняном горшочке
+GET: lang=ru, type=product, id=21, field=description -> res=Нежное мясо, овощи и специальный соус, приготовленные в глиняном горшочке; подается горячим.
+GET: lang=ru, type=product, id=21, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=13, field=name -> res=Мясные блюда
+GET: lang=ru, type=allergen, id=8, field=name -> res=Баранина
+GET: lang=ru, type=product, id=22, field=name -> res=Сач Кавурма
+GET: lang=ru, type=product, id=22, field=description -> res=Основное блюдо с богатым вкусом, приготовленное из нарезанного кубиками мяса с овощами и специями на садже.
+GET: lang=ru, type=product, id=22, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=13, field=name -> res=Мясные блюда
+GET: lang=ru, type=allergen, id=8, field=name -> res=Баранина
+GET: lang=ru, type=product, id=26, field=name -> res=Порция курицы на гриле
+GET: lang=ru, type=product, id=26, field=description -> res=Тщательно приготовленная курица на гриле; подается с рисом, картофелем фри и овощами на гриле.
+GET: lang=ru, type=product, id=26, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=15, field=name -> res=Блюда из курицы
+GET: lang=ru, type=allergen, id=9, field=name -> res=Курица
+GET: lang=ru, type=allergen, id=1, field=name -> res=Глютен
+GET: lang=ru, type=product, id=28, field=name -> res=Куриное соте
+GET: lang=ru, type=product, id=28, field=description -> res=Куриное мясо, обжаренное с овощами; подается с рисом, картофелем фри и овощами на гриле.
+GET: lang=ru, type=product, id=28, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=15, field=name -> res=Блюда из курицы
+GET: lang=ru, type=allergen, id=9, field=name -> res=Курица
+GET: lang=ru, type=allergen, id=1, field=name -> res=Глютен
+GET: lang=ru, type=product, id=27, field=name -> res=Курица на гриле (1 кг)
+GET: lang=ru, type=product, id=27, field=description -> res=Курица на гриле для компании; идеально подходит для больших столов, подается горячей и свежей.
+GET: lang=ru, type=product, id=27, field=serving_size -> res=1000 г
+GET: lang=ru, type=category, id=15, field=name -> res=Блюда из курицы
+GET: lang=ru, type=allergen, id=9, field=name -> res=Курица
+GET: lang=ru, type=product, id=29, field=name -> res=Фирменный гриль «Едидеирмен»
+GET: lang=ru, type=product, id=29, field=description -> res=Особое ассорти-гриль: 2 фрикадельки (кёфте), 2 кусочка курицы на гриле, 1 куриный шашлык (шиш-кебаб) и 2 бараньи отбивные.
+GET: lang=ru, type=product, id=29, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=16, field=name -> res=Фирменные блюда на гриле
+GET: lang=ru, type=allergen, id=8, field=name -> res=Баранина
+GET: lang=ru, type=allergen, id=9, field=name -> res=Курица
+GET: lang=ru, type=allergen, id=1, field=name -> res=Глютен
+GET: lang=ru, type=product, id=17, field=name -> res=Чечевичный суп
+GET: lang=ru, type=product, id=17, field=description -> res=Классический чечевичный суп, густой и подается горячим, подходит для любого времени дня.
+GET: lang=ru, type=product, id=17, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=11, field=name -> res=Супы
+GET: lang=ru, type=allergen, id=1, field=name -> res=Глютен
+GET: lang=ru, type=allergen, id=2, field=name -> res=Молоко и молочные продукты
+GET: lang=ru, type=product, id=18, field=name -> res=Региональный капустный суп
+GET: lang=ru, type=product, id=18, field=description -> res=Любимое блюдо черноморской кухни; горячий суп, приготовленный из капусты, местных ингредиентов и особых специй.
+GET: lang=ru, type=product, id=18, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=11, field=name -> res=Супы
+GET: lang=ru, type=allergen, id=1, field=name -> res=Глютен
+GET: lang=ru, type=allergen, id=2, field=name -> res=Молоко и молочные продукты
+GET: lang=ru, type=product, id=30, field=name -> res=Молочный рисовый пудинг «Сютлач»
+GET: lang=ru, type=product, id=30, field=description -> res=Запеченный сливочный рисовый пудинг, подается с фундуком.
+GET: lang=ru, type=product, id=30, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=17, field=name -> res=Десерты
+GET: lang=ru, type=allergen, id=4, field=name -> res=Орехи
+GET: lang=ru, type=allergen, id=2, field=name -> res=Молоко и молочные продукты
+GET: lang=ru, type=product, id=31, field=name -> res=Вода
+GET: lang=ru, type=product, id=31, field=description -> res=Освежающая питьевая вода.
+GET: lang=ru, type=product, id=31, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=18, field=name -> res=Напитки
+GET: lang=ru, type=product, id=32, field=name -> res=Чай
+GET: lang=ru, type=product, id=32, field=description -> res=Свежезаваренный традиционный турецкий чай.
+GET: lang=ru, type=product, id=32, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=18, field=name -> res=Напитки
+GET: lang=ru, type=product, id=33, field=name -> res=Маленький самовар
+GET: lang=ru, type=product, id=33, field=description -> res=Свежезаваренный чай в маленьком самоваре, идеально для совместного чаепития.
+GET: lang=ru, type=product, id=33, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=19, field=name -> res=Чай из самовара
+GET: lang=ru, type=product, id=34, field=name -> res=Средний самовар
+GET: lang=ru, type=product, id=34, field=description -> res=Свежезаваренный чай в самоваре среднего размера, идеально для семьи и друзей.
+GET: lang=ru, type=product, id=34, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=19, field=name -> res=Чай из самовара
+GET: lang=ru, type=product, id=35, field=name -> res=Большой самовар
+GET: lang=ru, type=product, id=35, field=description -> res=Свежезаваренный чай в большом самоваре, идеально для больших компаний.
+GET: lang=ru, type=product, id=35, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=19, field=name -> res=Чай из самовара
+GET: lang=ru, type=product, id=36, field=name -> res=Кока-Кола 1 литр
+GET: lang=ru, type=product, id=36, field=description -> res=Охлажденная Кока-Кола, 1 литр.
+GET: lang=ru, type=product, id=36, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=18, field=name -> res=Напитки
+GET: lang=ru, type=product, id=37, field=name -> res=Апельсиновый газированный напиток 1 литр
+GET: lang=ru, type=product, id=37, field=description -> res=Охлажденный 1 литр апельсинового газированного напитка.
+GET: lang=ru, type=product, id=37, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=18, field=name -> res=Напитки
+GET: lang=ru, type=product, id=38, field=name -> res=Кока-Кола в банке
+GET: lang=ru, type=product, id=38, field=description -> res=Охлажденная Кока-Кола в банке.
+GET: lang=ru, type=product, id=38, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=18, field=name -> res=Напитки
+GET: lang=ru, type=product, id=39, field=name -> res=Фруктовый сок в банке
+GET: lang=ru, type=product, id=39, field=description -> res=Охлажденный фруктовый сок в банке, вкус на выбор.
+GET: lang=ru, type=product, id=39, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=18, field=name -> res=Напитки
+GET: lang=ru, type=product, id=40, field=name -> res=Холодный чай в банке
+GET: lang=ru, type=product, id=40, field=description -> res=Освежающий холодный чай в банке, подается охлажденным.
+GET: lang=ru, type=product, id=40, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=18, field=name -> res=Напитки
+GET: lang=ru, type=product, id=41, field=name -> res=Минеральная вода без газа
+GET: lang=ru, type=product, id=41, field=description -> res=Минеральная вода без газа, подается охлажденной.
+GET: lang=ru, type=product, id=41, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=18, field=name -> res=Напитки
+GET: lang=ru, type=product, id=42, field=name -> res=Фруктовая содовая
+GET: lang=ru, type=product, id=42, field=description -> res=Минеральная вода с фруктовым вкусом, подается охлажденной.
+GET: lang=ru, type=product, id=42, field=serving_size -> res=NULL
+GET: lang=ru, type=category, id=18, field=name -> res=Напитки

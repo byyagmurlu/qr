@@ -4,12 +4,13 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
 const NAV = [
-  { to: '/admin',            icon: '📊', label: 'Dashboard',   end: true  },
-  { to: '/admin/categories', icon: '📂', label: 'Kategoriler'             },
-  { to: '/admin/products',   icon: '🍽️', label: 'Ürünler'                },
-  { to: '/admin/allergens',  icon: '⚠️', label: 'Alerjenler'             },
-  { to: '/admin/settings',   icon: '⚙️', label: 'Ayarlar'               },
-  { to: '/admin/bulk',       icon: '📦', label: 'Toplu İşlemler'         },
+  { to: '/admin',            icon: '📊', label: 'Dashboard',      end: true  },
+  { to: '/admin/categories', icon: '📂', label: 'Kategoriler'                },
+  { to: '/admin/products',   icon: '🍽️', label: 'Ürünler'                   },
+  { to: '/admin/allergens',  icon: '⚠️', label: 'Alerjenler'                },
+  { to: '/admin/settings',   icon: '⚙️', label: 'Ayarlar'                  },
+  { to: '/admin/bulk',       icon: '📦', label: 'Toplu İşlemler'            },
+  { to: '/admin/profile',    icon: '👤', label: 'Profil & Güvenlik'         },
 ];
 
 export default function AdminLayout({ children }) {

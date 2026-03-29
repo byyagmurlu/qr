@@ -9,6 +9,7 @@ import ProductsPage from './pages/admin/ProductsPage';
 import AllergensPage from './pages/admin/AllergensPage';
 import SettingsPage from './pages/admin/SettingsPage';
 import BulkPage from './pages/admin/BulkPage';
+import ProfilePage from './pages/admin/ProfilePage';
 
 
 function ProtectedRoute({ children }) {
@@ -30,6 +31,7 @@ function AppRoutes() {
       <Route path="/admin/allergens"  element={<ProtectedRoute><AllergensPage /></ProtectedRoute>} />
       <Route path="/admin/settings"   element={<ProtectedRoute><SettingsPage /></ProtectedRoute>} />
       <Route path="/admin/bulk"       element={<ProtectedRoute><BulkPage     /></ProtectedRoute>} />
+      <Route path="/admin/profile"    element={<ProtectedRoute><ProfilePage  /></ProtectedRoute>} />
 
 
       {/* Fallback */}
